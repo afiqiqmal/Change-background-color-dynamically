@@ -1,0 +1,26 @@
+
+<style type="text/css">
+		body{
+			transition:1s;
+		}
+</style>
+
+<script>
+var color = "0123456789ABCEDF";
+
+function changeColor() {
+    var temp = "";
+    for (var a = 0; a < 6; a++)
+        temp += color[Math.floor(Math.random() * color.length)];
+
+
+    document.body.style.backgroundColor = "#" + temp;
+}
+
+function start() {
+    setInterval("changeColor()", 1000)
+}
+
+start();
+
+</script>
